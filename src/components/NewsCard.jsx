@@ -1,6 +1,7 @@
 
 
 import { AiFillEye, AiOutlineShareAlt, AiFillStar } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const NewsCard = ({ news }) => {
   return (
@@ -34,7 +35,7 @@ const NewsCard = ({ news }) => {
       {/* Details */}
       <p className="text-gray-700 text-sm mb-2">
         {news.details.slice(0, 100)}...{" "}
-        <span className="text-blue-500 font-semibold cursor-pointer">Read More</span>
+        <Link to={`/news/${news._id}`} className="text-blue-500 font-semibold cursor-pointer">Read More</Link>
       </p>
 
       {/* Rating and Views */}
